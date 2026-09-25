@@ -1,0 +1,35 @@
+export class Player {
+    constructor(name, level) {
+      this.name = name;
+      this.level = level;
+      this.experiencePoints = 0;
+      this.inventory = {};
+      
+    }
+
+    gainExperience(amount){
+      this.experiencePoints = (amount + this.experiencePoints)
+      while (this.experiencePoints >= 30) {
+        this.level++;
+        this.experiencePoints -= 30;
+      
+      }      
+    }
+
+    info() {
+      return this.name + " has reached Level " + this.level + "!"
+    }
+
+    joinParty(party) {
+      party.push(this);
+    }
+
+    leaveParty(party) {
+      const index = party.indexOf(this);
+      party.splice(index, 1);
+    }
+
+    
+
+        
+}
