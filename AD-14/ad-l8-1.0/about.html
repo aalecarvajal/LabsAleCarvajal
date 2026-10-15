@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es"> 
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mi Blog | About Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet"/>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  
+    <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-md bg-lavanda">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="index.html">Mi Blog</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#menu" aria-controls="menu"
+              aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="menu">
+        <ul class="navbar-nav gap-2">
+            <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active px-3" aria-current="page" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link px-3" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== GRID: AD | CONTENT | NEWS ===== -->
+  <div class="container-fluid flex-grow-1">
+    <div class="row">
+
+      <aside class="col-md-2 bg-menta zona-reservada border-end">
+        <p class="text-secondary text-center small mt-3">Espacio publicitario</p>
+      </aside>
+
+      <main class="col-md-8 py-4">
+        <h1 class="display-5 fw-bold text-center">Sobre nosotros</h1>
+        <p class="lead text-center text-secondary">
+            Somos fans de la música en vivo.
+        </p>
+
+        <!-- Tarjetas del equipo: grid ANIDADO dentro de la columna central -->
+        <div class="row g-3 my-4 justify-content-center">
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 text-center shadow-sm">
+                    <img src="Pictures/Lemur-Concert.jpeg" class="card-img-top" alt="Foto de Ale">
+                    <div class="card-body">
+                    <h2 class="card-title h5">Ale Carvajal</h2>
+                    <p class="card-text text-secondary">Programadora</p>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+
+        <!-- Por qué existe el sitio (lo pide la tarea) -->
+        <div class="card bg-menta border-0 p-4">
+            <h2 class="h4">¿Por qué existe este blog?</h2>
+            <p class="mb-0">
+            Creamos este sitio como proyecto del curso de Desarrollador Java Full Stack de 
+            Generation México para practicar HTML, CSS y Bootstrap.
+            </p>
+        </div>
+</main>
+      </main>
+
+      <aside class="col-md-2 bg-menta zona-reservada border-start">
+        <p class="text-secondary text-center small mt-3">Noticias (próximamente)</p>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-lavanda text-center py-3">
+    <p class="mb-1 fw-semibold">Equipo: Ale Carvajal</p>
+    <p class="mb-0 small text-secondary">
+      ale@blogfalso.com 
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
