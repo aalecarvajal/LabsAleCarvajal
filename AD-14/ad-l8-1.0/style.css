@@ -1,0 +1,53 @@
+/* ===== 1. TU PALETA (cámbiala solo aquí y se actualiza todo el sitio) ===== */
+:root {
+  --crema:   #F5F8E6;
+  --menta:   #ECF3E3;
+  --lavanda: #D4CCE8;
+  --lila:    #B9B3EB;
+  --morado:  #CAABE2;
+
+  /* Le decimos a Bootstrap que el fondo de la página es crema */
+  --bs-body-bg: var(--crema);
+}
+
+/* ===== 2. CLASES DE FONDO (se usan igual que bg-dark, bg-light...) ===== */
+.bg-lavanda { background-color: var(--lavanda); }
+.bg-menta   { background-color: var(--menta); }
+
+/* ===== 3. NAVBAR: página activa ===== */
+.navbar .nav-link.active {
+  background-color: var(--lila);
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+/* ===== 4. BOTÓN PERSONALIZADO con las variables de Bootstrap ===== */
+.btn-lila {
+  --bs-btn-bg: var(--lila);
+  --bs-btn-border-color: var(--lila);
+  --bs-btn-color: #212529;
+  --bs-btn-hover-bg: var(--morado);
+  --bs-btn-hover-border-color: var(--morado);
+  --bs-btn-hover-color: #212529;
+  --bs-btn-active-bg: var(--morado);
+  --bs-btn-active-border-color: var(--morado);
+}
+
+/* ===== 5. ALERTA PERSONALIZADA ===== */
+.alert-paleta {
+  --bs-alert-bg: var(--menta);
+  --bs-alert-border-color: var(--lila);
+  --bs-alert-color: #212529;
+}
+
+/* ===== 6. FORMULARIO: brillo lila en vez del azul de Bootstrap ===== */
+.form-control:focus {
+  border-color: var(--lila);
+  box-shadow: 0 0 0 0.25rem rgba(185, 179, 235, 0.5);
+}
+
+/* ===== 7. COLUMNAS LATERALES RESERVADAS ===== */
+.zona-reservada {
+  min-height: 70vh;
+  border-color: var(--morado) !important;
+}
