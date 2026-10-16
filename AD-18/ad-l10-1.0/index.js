@@ -31,8 +31,11 @@ function addItem(item) {
 function fetchColorsList() {
   fetch("https://reqres.in/api/unknown?per_page=12")
     .then(response => response.json())
-    .then(colores => console.log(colores))
-
+    .then(colores => {
+      console.log(colores)
+      colores.data.forEach(item => addItem(item))
+      localStorage.setItem("colores", JSON.stringify(colores.data)) 
+    })
 }
 
 function loadColorsFromStorage() {
