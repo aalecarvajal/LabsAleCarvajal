@@ -1,4 +1,16 @@
 const itemsContainer = document.querySelector("#list-items")
+const btnBorrar = document.querySelector("#btn-borrar")
+const btnCargar = document.querySelector("#btn-cargar")
+
+btnCargar.addEventListener("click", ()=>{
+  fetchColorsList()
+})
+
+btnBorrar.addEventListener("click", ()=>{
+  localStorage.removeItem("colores")
+  itemsContainer.innerHTML = ""
+   
+})
 
 function addItem(item) {
   const colourCard = document.createElement("section")
@@ -33,19 +45,21 @@ function fetchColorsList() {
     .then(response => response.json())
     .then(colores => {
       console.log(colores)
+      itemsContainer.innerHTML = ""
       colores.data.forEach(item => addItem(item))
       localStorage.setItem("colores", JSON.stringify(colores.data)) 
     })
 }
 
 function loadColorsFromStorage() {
-  const colores = localStorage.getItem("colores") 
-  const listaColores = JSON.parse(colores)  
-  listaColores.forEach(item => addItem(item))
+  const colores = localStorage.getItem("colores")
+  if (colores !== null) { 
+    const listaColores = JSON.parse(colores)  
+    listaColores.forEach(item => addItem(item))
+  }
 }
 
 
 
 loadColorsFromStorage()
 
-fetchColorsList()
