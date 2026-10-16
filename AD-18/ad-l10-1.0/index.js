@@ -39,8 +39,11 @@ function fetchColorsList() {
 }
 
 function loadColorsFromStorage() {
-  
+  const colores = localStorage.getItem("colores") 
+  const listaColores = JSON.parse(colores)  
+  listaColores.forEach(item => addItem(item))
 }
+
 
 
 loadColorsFromStorage()
