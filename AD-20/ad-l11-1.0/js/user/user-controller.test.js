@@ -31,3 +31,9 @@ test('remove non existing user from userController', () => {
     expect(userController.getUsers()).toHaveLength(numberUsers);
     console.log(numberUsers)
 });
+
+test('find user by email ',() => {
+    let user = new User(1112, "Jose", "jose@generation.org");
+    userController.add(user);
+    expect(userController.findByEmail("jose@generation.org")).toBe(user); 
+});
