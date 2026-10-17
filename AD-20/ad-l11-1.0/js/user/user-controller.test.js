@@ -37,3 +37,7 @@ test('find user by email ',() => {
     userController.add(user);
     expect(userController.findByEmail("jose@generation.org")).toBe(user); 
 });
+
+test('test find user with unregistered email ',() => {
+    expect(userController.findByEmail("arge@generation.org")).toBeUndefined(); 
+});
