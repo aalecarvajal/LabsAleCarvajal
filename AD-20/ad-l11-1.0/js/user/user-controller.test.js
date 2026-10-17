@@ -16,3 +16,9 @@ test('remove user to userController', () => {
     expect(userController.users).not.toContain(user);
   });
 
+test('identify new user is not previously registered in UserController then add it', () => {
+    let user = new User(5678, "Ricardo", "ricardo@generation.org");
+    expect(userController.getUsers()).not.toContain(user);
+    userController.add(user);
+    expect(userController.getUsers()).toContain(user);               
+});

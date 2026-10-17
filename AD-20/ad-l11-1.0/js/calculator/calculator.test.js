@@ -28,7 +28,7 @@ test('multiply 8 * 2 to equal 16', () => {
   expect(calculator.multiply(8, 2)).toBe(16);
 });
 
-test('multiply 6 * 0 to equal 9', () => {
+test('multiply 6 * 0 to equal 0', () => {
   expect(calculator.multiply(6, 0)).toBe(0);
 });
 
