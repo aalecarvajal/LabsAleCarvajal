@@ -32,3 +32,6 @@ test('multiply 6 * 0 to equal 0', () => {
   expect(calculator.multiply(6, 0)).toBe(0);
 });
 
+test('divide 10 / 0 to equal undefined', () => {
+  expect(calculator.divide(10, 0)).toBe(undefined);
+});
