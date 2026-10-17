@@ -29,7 +29,7 @@ test('remove non existing user from userController', () => {
     userController.remove(user);
     expect(userController.getUsers()).not.toContain(user);
     expect(userController.getUsers()).toHaveLength(numberUsers);
-    console.log(numberUsers)
+    
 });
 
 test('find user by email ',() => {
@@ -40,4 +40,14 @@ test('find user by email ',() => {
 
 test('test find user with unregistered email ',() => {
     expect(userController.findByEmail("arge@generation.org")).toBeUndefined(); 
+});
+
+test('find user by id ',() => {
+    let user = new User(1314, "Ren", "ren@generation.org");
+    userController.add(user);
+    expect(userController.findById(1314)).toBe(user); 
+});
+
+test('test find user with unregistered id ',() => {
+    expect(userController.findById(1516)).toBeUndefined(); 
 });
